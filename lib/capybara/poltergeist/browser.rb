@@ -79,6 +79,10 @@ module Capybara::Poltergeist
       command 'click_coordinates', x, y
     end
 
+    def send_keys(keys)
+      command 'send_keys', keys
+    end
+
     def evaluate(script)
       command 'evaluate', script
     end
