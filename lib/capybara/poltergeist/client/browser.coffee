@@ -185,6 +185,10 @@ class Poltergeist.Browser
     this.node(page_id, id).dragTo this.node(page_id, other_id)
     this.sendResponse(true)
 
+  send_keys: (keys) ->
+    @page.sendEvent("keypress", keys)
+    this.sendResponse(true)
+
   trigger: (page_id, id, event) ->
     this.node(page_id, id).trigger(event)
     this.sendResponse(event)

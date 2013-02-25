@@ -108,6 +108,10 @@ module Capybara::Poltergeist
       command 'select', page_id, id, value
     end
 
+    def send_keys(keys)
+      command 'send_keys', keys
+    end
+
     def trigger(page_id, id, event)
       command 'trigger', page_id, id, event.to_s
     end
